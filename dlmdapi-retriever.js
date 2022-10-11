@@ -1,3 +1,4 @@
+alert("hi");
 const dlapi_xYEJ22MLy5 = async function () {
   consoleShow_LMYz9GUf9m();
   consolePrint_MgzkaLC2RU("Begin JSON download...");
