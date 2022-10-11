@@ -55,6 +55,6 @@ const dlapi_xYEJ22MLy5 = async function () {
   element.click();
   document.body.removeChild(element);
   consolePrint_MgzkaLC2RU("Download successful");
-  setTimeout(consoleHide_nQQryu3f0m, 2000);
+  setTimeout(consoleHide_nQQryu3f0m, 10000);
 };
 dlapi_xYEJ22MLy5();
