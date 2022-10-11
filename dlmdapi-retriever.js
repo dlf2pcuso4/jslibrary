@@ -1,3 +1,4 @@
+alert("begin");
 _consoleShow();
 _consolePrint("Begin JSON download...");
 let apiResponse = await fetch(
