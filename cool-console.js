@@ -9,6 +9,7 @@ document.body.appendChild(_popup);
 const _consolePrint = (txt) => {
   _popup.innerHTML = _popup.innerHTML.slice(0, -5) + "</p><p>" + txt + "_</p>";
   _popup.scrollTop = _popup.scrollHeight;
+  console.log(txt);
 };
 const _consoleShow = () => (_popup.style.display = "block");
 const _consoleHide = () => (_popup.style.display = "none");
