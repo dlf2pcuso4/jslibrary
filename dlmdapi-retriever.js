@@ -41,15 +41,16 @@ const dlapi_xYEJ22MLy5 = async function () {
   apiData = await apiResponse.json();
   text += JSON.stringify(apiData).slice(1);
   consolePrint_MgzkaLC2RU("Page 5/5 loaded");
-  consolePrint_MgzkaLC2RU("Preparing to download retrieved data as JSON");
+  text = "var jsonResponseDl = " + text;
+  consolePrint_MgzkaLC2RU("Preparing to download retrieved data as JS");
   let element = document.createElement("a");
   element.setAttribute(
     "href",
     "data:text/plain;charset=utf-8," + encodeURIComponent(text)
   );
-  element.setAttribute("download", "carddb-dl.json");
+  element.setAttribute("download", "carddb-dl.js");
   element.style.display = "none";
-  consolePrint_MgzkaLC2RU("JSON document carddb-dl.json created");
+  consolePrint_MgzkaLC2RU("JS document carddb-dl.js created");
   document.body.appendChild(element);
   consolePrint_MgzkaLC2RU("Downloading...");
   element.click();
@@ -57,6 +58,7 @@ const dlapi_xYEJ22MLy5 = async function () {
   consolePrint_MgzkaLC2RU("Download successful");
   document.body.onclick = consoleHide_nQQryu3f0m;
 };
+
 const mdapi_LFqWAu4reH = async function () {
   consoleShow_LMYz9GUf9m();
   consolePrint_MgzkaLC2RU("Begin JSON download...");
@@ -100,15 +102,16 @@ const mdapi_LFqWAu4reH = async function () {
   apiData = await apiResponse.json();
   text += JSON.stringify(apiData).slice(1);
   consolePrint_MgzkaLC2RU("Page 5/5 loaded");
-  consolePrint_MgzkaLC2RU("Preparing to download retrieved data as JSON");
+  text = "var jsonResponseMd = " + text;
+  consolePrint_MgzkaLC2RU("Preparing to download retrieved data as JS");
   let element = document.createElement("a");
   element.setAttribute(
     "href",
     "data:text/plain;charset=utf-8," + encodeURIComponent(text)
   );
-  element.setAttribute("download", "carddb-md.json");
+  element.setAttribute("download", "carddb-md.js");
   element.style.display = "none";
-  consolePrint_MgzkaLC2RU("JSON document carddb-md.json created");
+  consolePrint_MgzkaLC2RU("JS document carddb-md.js created");
   document.body.appendChild(element);
   consolePrint_MgzkaLC2RU("Downloading...");
   element.click();
@@ -116,6 +119,7 @@ const mdapi_LFqWAu4reH = async function () {
   consolePrint_MgzkaLC2RU("Download successful");
   document.body.onclick = consoleHide_nQQryu3f0m;
 };
+
 if (window.location.href.includes("duellinksmeta")) {
   dlapi_xYEJ22MLy5();
 }
